@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Batch Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/batch_predict.css') }}">
+</head>
+<body class = "background">
+    <form action="{{ url_for('home')}}"methods=['GET','POST']>
+        <button type="submit" class="btn btn-primary btn-block btn-large btn-2">Home</button>
+    </form>
+
+    <p style="font-style: italic;font-size: 30px;font-family: none; color: burlywood;">To Predict for more than 1 record please upload the file in '.csv' format</p>
+    <p style="font-size: x-large;">Column headings as follows:</p>
+    <table>
+        <tr>
+            <th>MONTH</th>
+            <th>DAY</th>
+            <th>DAY_OF_WEEK</th>
+            <th>AIRLINE</th>
+            <th>TAXI_OUT</th>
+            <th>SCHEDULED_TIME</th>
+            <th>ELAPSED_TIME</th>
+            <th>AIR_TIME</th>
+            <th>DISTANCE</th>
+            <th>TAXI_IN</th>
+            <th>ARRIVAL_DELAY</th>
+            <th>WHEELS_ON</th>
+            <th>WHEELS_OFF</th>
+            <th>SCHEDULED_DEPARTURE</th>
+            <th>SCHEDULED_ARRIVAL</th>
+            <th>DEPARTURE_TIME</th>
+            <th>ARRIVAL_TIME</th>
+        </tr>
+    </table>
+
+<form action = "/success" method = "post" enctype="multipart/form-data">
+        <input type="file" name="file" class="btn btn-primary btn-block btn-large btn-2"/>
+    <input type = "submit" value="Upload and Predict" class="btn btn-primary btn-block btn-large btn-2" style="margin-top: 30px;">
+</form>
+</body>
+</html>

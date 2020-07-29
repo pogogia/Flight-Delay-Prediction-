@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Record Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class = "background">
+
+    <form action="{{ url_for('home')}}"methods=['GET','POST']>
+        <button type="submit" class="btn btn-primary btn-block btn-large btn-2">Home</button>
+    </form>
+
+    <div class="login">
+	<h1>Flight Delay Prediction</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+    	    <input type="text" name="MONTH" placeholder="MONTH" required="required" />
+            <input type="text" name="DAY" placeholder="DAY" required="required" />
+		    <input type="text" name="DAY_OF_WEEK" placeholder="DAY_OF_WEEK" required="required" />
+        <div class = "dropdown">
+        <label for="AL" style="border: none; font-size: 25px;">Airline</label>
+        <select id="AL" name="AL" class = "dropdown">
+      <option value="0">American Airlines Inc.(AA)</option>
+      <option value="1">Alaska Airlines Inc.(AS)</option>
+      <option value="2">JetBlue Airways(B6)</option>
+      <option value="3">Delta Air Lines Inc.(DL)</option>
+      <option value="4">Atlantic Southeast Airlines(EV)</option>
+      <option value="5">Frontier Airlines Inc.(F9)</option>
+      <option value="6">Hawaiian Airlines Inc.(HA)</option>
+      <option value="7">American Eagle Airlines Inc.(MQ)</option>
+      <option value="8">Spirit Air Lines(NK)</option>
+      <option value="9">Skywest Airlines Inc.(OO)</option>
+      <option value="10">United Air Lines Inc.(UA)</option>
+      <option value="11">US Airways Inc.(US)</option>
+      <option value="12">American Eagle Airlines Inc.(VX)</option>
+      <option value="13">Southwest Airlines Co.(WN)</option>
+    </select>
+           </div>
+            <input type="text" name="TAXI_OUT" placeholder="TAXI_OUT" required="required" />
+		    <input type="text" name="SCHEDULED_TIME" placeholder="SCHEDULED_TIME" required="required" />
+            <input type="text" name="ELAPSED_TIME" placeholder="ELAPSED_TIME" required="required" />
+            <input type="text" name="AIR_TIME" placeholder="AIR_TIME" required="required" />
+		    <input type="text" name="DISTANCE" placeholder="DISTANCE" required="required" />
+            <input type="text" name="TAXI_IN" placeholder="TAXI_IN" required="required" />
+            <input type="text" name="ARRIVAL_DELAY" placeholder="ARRIVAL_DELAY" required="required" />
+		    <input type="text" name="WHEELS_ON" placeholder="WHEELS_ON (hh:mm format)" required="required" />
+            <input type="text" name="WHEELS_OFF" placeholder="WHEELS_OFF (hh:mm format)" required="required" />
+            <input type="text" name="SCHEDULED_DEPARTURE" placeholder="SCHEDULED_DEPARTURE (hh:mm format)" required="required" />
+            <input type="text" name="SCHEDULED_ARRIVAL" placeholder="SCHEDULED_ARRIVAL (hh:mm format)" required="required" />
+            <input type="text" name="DEPARTURE_TIME" placeholder="DEPARTURE_TIME (hh:mm format)" required="required" />
+            <input type="text" name="ARRIVAL_TIME" placeholder="ARRIVAL_TIME (hh:mm format)" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Departure Delay</button>
+    </form>
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+</body>
+</html>

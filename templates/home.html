@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Delay Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body class = "background">
+    <h1>Welcome to Flight Delay Prediction</h1>
+    <p style="font-size: 30px; font-style: italic; color: burlywood; font-family: none;">If you need only one input to be processed, Please proceed with Single Record Prediction.</p>
+    <p style="font-size: 30px; font-style: italic; color: burlywood; font-family: none;">If you want to predict for more than one record, Please proceed with Batch Prediction.</p>
+    <form action="{{ url_for('single')}}"methods=['GET','POST']>
+        <button type="submit" class="btn btn-primary btn-block btn-large btn-1" style="
+    margin-top: 100px;">Single Record Prediction</button>
+    </form>
+
+    <form action="{{ url_for('batch')}}"methods=['GET','POST']>
+        <button type="submit" class="btn btn-primary btn-block btn-large btn-1">Batch Prediction</button>
+    </form>
+
+</body>
+</html>
