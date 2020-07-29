@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download the result file</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/download.css') }}">
+</head>
+  <body class="background">
+     <h1>File Upload and Prediction Successful.</h1>
+     <p style="font-size: 20px">Please download the file to view your results.</p>
+
+      <a href="/return-files/{{value}}" target="blank"><button class="btn btn-primary btn-block btn-large btn-1 btn-2">Download</button></a>
+
+  </body>
