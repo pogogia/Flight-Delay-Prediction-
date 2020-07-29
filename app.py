@@ -77,7 +77,7 @@ def split_time(feat):
 app = Flask(__name__) #Initialize the flask App
 
 
-model = pickle.load(open('adaboost_model.pkl', 'rb'))
+model = pickle.load(open('DT_AdaBoost.pkl', 'rb'))
 scaler = MinMaxScaler()
 
 @app.route('/')
