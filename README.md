@@ -15,3 +15,4 @@ Project Flow:
 7. Performed boosting techniques like Adaboost, Gradient boosting, catboost on algorithm.
 8. Marked accuracy 92% on testing set in final model and noted feature importance for the same. 
 9. Deployed model with single record and batch records prediction using flask as front-end framework. 
+10. Deployed on Heroku by syncing with Github.
